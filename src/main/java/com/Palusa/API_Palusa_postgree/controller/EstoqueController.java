@@ -8,7 +8,6 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/estoque")
 public class EstoqueController {
 
     private EstoqueService estoqueService;
@@ -18,12 +17,12 @@ public class EstoqueController {
         this.estoqueService= estoqueService;
     }
 
-    @GetMapping
+    @GetMapping("/pegar")
     public List<Estoque> getall(){
         return estoqueService.getall();
     }
 
-    @PostMapping
+    @PostMapping("/salvar")
     public  Estoque addestoque(@RequestBody Estoque estoque){
 
         return estoqueService.addEstoque(estoque);
