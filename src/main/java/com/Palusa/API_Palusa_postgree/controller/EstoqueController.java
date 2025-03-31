@@ -21,12 +21,12 @@ public class EstoqueController {
         this.estoqueService= estoqueService;
     }
 
-    @GetMapping("/pegar", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping("/pegar")
     public List<Estoque> getall(){
         return estoqueService.getall();
     }
 
-    @PostMapping("/salvar")
+    @PostMapping(value = "/salvar", consumes = MediaType.APPLICATION_JSON_VALUE)
     public Estoque addestoque(@RequestBody Estoque estoque){
 
         return estoqueService.addEstoque(estoque);
