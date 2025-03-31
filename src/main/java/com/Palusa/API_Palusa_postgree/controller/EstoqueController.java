@@ -26,10 +26,12 @@ public class EstoqueController {
     }
 
     @PostMapping("/salvar")
-    public  Estoque addestoque(@RequestBody Estoque estoque){
+    public Estoque addestoque(@RequestBody Estoque estoque){
 
         return estoqueService.addEstoque(estoque);
 
     }
+
+
 
 }
