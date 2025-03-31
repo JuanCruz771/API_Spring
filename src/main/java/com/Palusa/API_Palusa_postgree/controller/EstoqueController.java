@@ -3,6 +3,7 @@ package com.Palusa.API_Palusa_postgree.controller;
 import com.Palusa.API_Palusa_postgree.models.Estoque;
 import com.Palusa.API_Palusa_postgree.service.EstoqueService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class EstoqueController {
         this.estoqueService= estoqueService;
     }
 
-    @GetMapping("/pegar")
+    @GetMapping("/pegar", consumes = MediaType.APPLICATION_JSON_VALUE)
     public List<Estoque> getall(){
         return estoqueService.getall();
     }
