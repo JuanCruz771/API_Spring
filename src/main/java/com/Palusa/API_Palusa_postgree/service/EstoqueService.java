@@ -18,8 +18,7 @@ public class EstoqueService {
 
     }
 
-    public Estoque addEstoque(Estoque estoque){
-
+    public Estoque addEstoque(Estoque estoque) {
         return estoqueRepository.save(estoque);
     }
 

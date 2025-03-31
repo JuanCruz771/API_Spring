@@ -2,14 +2,17 @@ package com.Palusa.API_Palusa_postgree.controller;
 
 import com.Palusa.API_Palusa_postgree.models.Estoque;
 import com.Palusa.API_Palusa_postgree.service.EstoqueService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 
 @RestController
+@RequestMapping("/estoque")
 public class EstoqueController {
 
+    @Autowired
     private EstoqueService estoqueService;
 
     public EstoqueController(EstoqueService estoqueService){
